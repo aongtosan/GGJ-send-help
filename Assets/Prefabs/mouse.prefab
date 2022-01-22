@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7921073705688830271}
   - component: {fileID: 5334999574070552053}
   - component: {fileID: 1477540839291828131}
+  - component: {fileID: -4743219791545338406}
   m_Layer: 0
   m_Name: mouse
   m_TagString: Untagged
@@ -103,3 +104,16 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-4743219791545338406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5839274982134924320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ed76f1be030c248a31756a6df3bf0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snakePosition: {fileID: 0}
