@@ -13,6 +13,9 @@ public class RatController : MonoBehaviour
     Quaternion initAngle;
 
     private NavMeshAgent agent;
+    
+    [SerializeField]
+    private GameObject mousePrefab;
     private void Awake()
     {
         snakePosition = GameObject.FindGameObjectWithTag("Player").transform;

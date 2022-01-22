@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private int StartingLength = 10;
+
+    [SerializeField]
+    private GameObject mousePrefab;
 
     void Awake(){
         GameObject newPart = Instantiate(part);
@@ -54,5 +58,14 @@ public class PlayerController : MonoBehaviour
         }
 
 
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        if (other.collider.CompareTag("Obstacle")) {
+            SceneManager.LoadScene("Game Over");
+        } else if (other.collider.CompareTag("Food")) {
+            Growing();
+            Destroy(other.gameObject);
+        }
     }
 }
