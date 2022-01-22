@@ -9,10 +9,18 @@ public class PlayerController : MonoBehaviour
     private float speed = 5f;
     private List<GameObject> body = new List<GameObject>();
     private List<Vector3> positionPart = new List<Vector3>();
+
+    [SerializeField]
+    private int StartingLength = 10;
+
     void Awake(){
-        Growing();
-        Growing();
-        Growing();
+        GameObject newPart = Instantiate(part);
+        newPart.transform.SetParent(transform);
+        body.Add(newPart);
+
+        for (int i=0; i<StartingLength; i++) {
+            Growing();
+        }
     }
     void Start()
     {
@@ -20,6 +28,7 @@ public class PlayerController : MonoBehaviour
     }
     void Growing(){
         GameObject newPart = Instantiate(part);
+        newPart.transform.SetParent(body[body.Count - 1].transform);
         body.Add(newPart);
     }
     void FixedUpdate()
@@ -33,13 +42,14 @@ public class PlayerController : MonoBehaviour
         GameObject headR = GameObject.Find("HeadR");
         GameObject headL = GameObject.Find("HeadL");
         
-        headL.transform.Rotate(Vector3.up * turn2Direction * 180 * Time.fixedDeltaTime);
-        headR.transform.Rotate(Vector3.up * turn1Direction * 180 * Time.fixedDeltaTime);
+        //headL.transform.Rotate(Vector3.up * turn2Direction * 180 * Time.fixedDeltaTime);
+        //headR.transform.Rotate(Vector3.up * turn1Direction * 180 * Time.fixedDeltaTime);
         int index = 0;
         int gap = 10;
         foreach(GameObject part in body){
             Vector3 partLoc =  positionPart[Mathf.Min(index * gap,  positionPart.Count-1)];
             part.transform.position = partLoc;
+            part.transform.LookAt(part.transform.parent.transform);
             index++;
         }
 
