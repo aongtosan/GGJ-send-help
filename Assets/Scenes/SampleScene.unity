@@ -608,7 +608,7 @@ GameObject:
   - component: {fileID: 1966269880}
   m_Layer: 0
   m_Name: snake
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -706,3 +706,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   part: {fileID: 8700090028382936707, guid: af78875c51bd217469b110752ee5bd75, type: 3}
+  StartingLength: 10
