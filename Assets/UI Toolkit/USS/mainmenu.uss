@@ -1,0 +1,47 @@
+.button-main-menu {
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 45px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-color: rgba(231, 122, 92, 255);
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    font-size: 20px;
+    color: rgba(255, 202, 171, 255);
+    padding-top: 0;
+    margin-top: 0;
+    -unity-font-style: bold;
+    -unity-font: url('project://database/Assets/Fonts/Barlow-Bold.ttf?fileID=12800000&guid=749aaac13575e08459812d1cb0635b80&type=3#Barlow-Bold');
+    white-space: normal;
+    -unity-font-definition: none;
+}
+
+.button-main-menu:hover {
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 45px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-color: rgb(231, 122, 92);
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    font-size: 25px;
+    color: rgb(255, 202, 171);
+    padding-top: 0;
+    margin-top: 0;
+    -unity-font-style: bold;
+    -unity-font: url('project://database/Assets/Fonts/Barlow-Bold.ttf?fileID=12800000&guid=749aaac13575e08459812d1cb0635b80&type=3#Barlow-Bold');
+    white-space: normal;
+    -unity-font-definition: none;
+}
