@@ -19,7 +19,7 @@
 
 .data-label {
     flex-direction: row;
-    color: rgba(95, 35, 13, 255);
+    color: rgb(95, 35, 13);
     font-size: 18px;
     -unity-text-align: middle-right;
     -unity-font-definition: none;
@@ -30,9 +30,6 @@
 }
 
 .options-button {
-}
-
-.optios-button {
     background-image: url('project://database/Assets/UI%20Toolkit/icon/sound.png?fileID=2800000&guid=39dbd6d4a429ec048a9c226753a52b5f&type=3#sound');
     padding-left: -19px;
     padding-right: -19px;
@@ -49,4 +46,19 @@
     border-right-width: 0;
     border-top-width: 0;
     border-bottom-width: 0;
+}
+
+.puase-window-button {
+    width: 91px;
+    height: 30px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-color: rgba(231, 122, 92, 255);
+    color: rgba(255, 202, 171, 255);
+    font-size: 15px;
+    -unity-font-definition: none;
+    -unity-font: url('project://database/Assets/Fonts/Barlow-Bold.ttf?fileID=12800000&guid=cca2404e6ff64d94fb60e3f3ce4f15e3&type=3#Barlow-Bold');
+    margin-top: 11px;
 }
