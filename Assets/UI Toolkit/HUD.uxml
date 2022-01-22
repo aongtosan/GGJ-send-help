@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/USS/HUD.uss?fileID=7433441132597879392&amp;guid=2a8608599ed1c214dbdea489009b1fb7&amp;type=3#HUD" />
     <ui:VisualElement class="root-container">
-        <ui:VisualElement name="game-data-container" style="width: 150px; height: 160px; position: absolute; left: 30px; top: 30px; right: 861px; bottom: 281px; background-color: rgb(239, 239, 239); padding-top: 0; justify-content: center;">
+        <ui:VisualElement name="game-data-container" style="width: 150px; height: 160px; position: absolute; left: 30px; top: 30px; right: 861px; bottom: 281px; background-color: rgba(224, 224, 224, 0.47); padding-top: 0; justify-content: center;">
             <ui:VisualElement class="game-data-row">
                 <ui:VisualElement class="data-icon" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/icon/clock.png?fileID=2800000&amp;guid=65c93e72da33f9d44b255821be67a136&amp;type=3#clock&apos;);" />
                 <ui:Label text="00:00" display-tooltip-when-elided="true" name="time-label" class="data-label" style="flex-grow: 0;" />
@@ -20,12 +20,12 @@
             <ui:Button display-tooltip-when-elided="true" name="sfx-button-mute" class="options-button" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/icon/mute.png?fileID=2800000&amp;guid=210251f9a31b1d0469d73ebfb0c578d5&amp;type=3#mute&apos;); visibility: visible; display: flex;" />
             <ui:Button display-tooltip-when-elided="true" name="options-button" class="options-button" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/icon/hamburger-menu.png?fileID=2800000&amp;guid=c4112c264ba95634587c86ec005f9db6&amp;type=3#hamburger-menu&apos;);" />
         </ui:VisualElement>
-        <ui:VisualElement name="pause-window" style="flex-grow: 1; position: absolute; left: 0; top: 2px; right: 0; bottom: -1px; width: 100%; height: 100%; background-color: rgba(180, 180, 180, 0.55); background-image: url(&apos;project://database/Assets/UI%20Toolkit/img/blurr.png?fileID=2800000&amp;guid=5779e499ccead8440a9bc4b78c9b8423&amp;type=3#blurr&apos;); -unity-background-image-tint-color: rgba(255, 255, 255, 0.43); justify-content: center; align-items: center; display: flex; visibility: hidden;">
-            <ui:VisualElement style="width: 54%; height: 50%; justify-content: center; align-items: center; background-color: rgba(183, 183, 183, 0.34);">
-                <ui:Label text="Game Paused" display-tooltip-when-elided="true" name="puase-label" style="font-size: 45px; height: 30%; width: 100%; -unity-text-align: middle-center; -unity-font-definition: none; -unity-font: url(&apos;project://database/Assets/Fonts/Barlow-Bold.ttf?fileID=12800000&amp;guid=cca2404e6ff64d94fb60e3f3ce4f15e3&amp;type=3#Barlow-Bold&apos;); color: rgb(63, 63, 63);" />
+        <ui:VisualElement name="pause-window" style="flex-grow: 1; position: absolute; left: 0; top: 2px; right: 0; bottom: -1px; width: 100%; height: 100%; background-color: rgba(180, 180, 180, 0.55); background-image: url(&apos;project://database/Assets/UI%20Toolkit/img/blurr.png?fileID=2800000&amp;guid=5779e499ccead8440a9bc4b78c9b8423&amp;type=3#blurr&apos;); -unity-background-image-tint-color: rgba(255, 255, 255, 0.43); justify-content: center; align-items: center; display: none; visibility: visible;">
+            <ui:VisualElement style="width: 54%; height: 50%; justify-content: center; align-items: center; background-color: rgba(183, 183, 183, 0.34); visibility: visible;">
+                <ui:Label text="Game Paused" display-tooltip-when-elided="true" name="pause-label" style="font-size: 45px; height: 30%; width: 100%; -unity-text-align: middle-center; -unity-font-definition: none; -unity-font: url(&apos;project://database/Assets/Fonts/Barlow-Bold.ttf?fileID=12800000&amp;guid=cca2404e6ff64d94fb60e3f3ce4f15e3&amp;type=3#Barlow-Bold&apos;); color: rgb(63, 63, 63);" />
                 <ui:Button text="Resume" display-tooltip-when-elided="true" name="resume-button" class="puase-window-button" />
-                <ui:Button text="Settings" display-tooltip-when-elided="true" name="resume-button" class="puase-window-button" />
-                <ui:Button text="Quit" display-tooltip-when-elided="true" name="resume-button" class="puase-window-button" />
+                <ui:Button text="Restart" display-tooltip-when-elided="true" name="restart-button" class="puase-window-button" style="visibility: visible; display: none;" />
+                <ui:Button text="Quit" display-tooltip-when-elided="true" name="quit-button" class="puase-window-button" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

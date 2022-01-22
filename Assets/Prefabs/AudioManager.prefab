@@ -93,3 +93,9 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Hit
+    clip: {fileID: 8300000, guid: e15cf14c0db3c8b4d8e4aa7d58dc7638, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

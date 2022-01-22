@@ -9,9 +9,11 @@ public class UIController : MonoBehaviour
     private Button SFXUnmuteButton;
     private Button optionsButton;
     private Button resumeButton;
+    private Button restartButton;
     private Label timeLabel;
     private Label miceLabel;
     private Label hpLabel;
+    private Label pauseLabel;
     private VisualElement pauseWindow;
     private bool isMuted;
     // Start is called before the first frame update
@@ -22,7 +24,9 @@ public class UIController : MonoBehaviour
         SFXUnmuteButton = root.Q<Button>("sfx-button-unmute");
         optionsButton = root.Q<Button>("options-button");
         resumeButton = root.Q<Button>("resume-button");
+        restartButton = root.Q<Button>("restart-button");
         timeLabel = root.Q<Label>("time-label");
+        pauseLabel = root.Q<Label>("pause-label");
         pauseWindow = root.Q<VisualElement>("pause-window");
 
         SFXUnmuteButton.clicked += SFXPressed;
@@ -48,13 +52,14 @@ public class UIController : MonoBehaviour
 
     void OptionsPressed()
     {
-        Debug.Log("Options clicked");
-        pauseWindow.visible = true;
+        pauseWindow.style.display = DisplayStyle.Flex;
+        Time.timeScale = 0f;
     }
 
     void ResumePressed()
     {
-        pauseWindow.visible = false;
+        pauseWindow.style.display = DisplayStyle.None;
+        Time.timeScale = 1f;
     }
 
     public void setTime(int time){
@@ -74,6 +79,15 @@ public class UIController : MonoBehaviour
         string sec = (time%60) < 10 ? ("0" + (time%60).ToString()) : (time%60).ToString();
         
         return $"{min}:{sec}";
+    }
+
+    public void gameOver(){
+        pauseLabel.text = "Game Over!!!";
+        pauseLabel.style.color = new StyleColor(Color.red);
+        restartButton.style.display = DisplayStyle.Flex;
+        resumeButton.style.display = DisplayStyle.None;
+        pauseWindow.style.display = DisplayStyle.Flex;
+        Time.timeScale = 0f;
     }
 
     void Update()
