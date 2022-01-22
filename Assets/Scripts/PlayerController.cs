@@ -66,6 +66,10 @@ public class PlayerController : MonoBehaviour
         } else if (other.collider.CompareTag("Food")) {
             Growing();
             Destroy(other.gameObject);
+
+            // sound fx
+            int rand = Random.Range(1, 7);
+            FindObjectOfType<AudioManager>().Play($"eat{rand}");
         }
     }
 }

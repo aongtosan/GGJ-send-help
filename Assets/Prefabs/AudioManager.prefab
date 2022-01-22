@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2312071820913735120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2312071820913735126}
+  - component: {fileID: 2312071820913735127}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2312071820913735126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2312071820913735120}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2312071820913735127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2312071820913735120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0cf6e603c61d54ebcb8b223584b425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Theme
+    clip: {fileID: 8300000, guid: f81743a10fedc6245bcf77ace11152d8, type: 3}
+    volume: 0.311
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: eat1
+    clip: {fileID: 8300000, guid: d7661ca7fc45fb64e95b73e1ea18f602, type: 3}
+    volume: 0.562
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: eat2
+    clip: {fileID: 8300000, guid: 5cb934d36f2076840ae68d0664cc19c3, type: 3}
+    volume: 0.562
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: eat3
+    clip: {fileID: 8300000, guid: 3dc23c296dacaab47ba559848951f351, type: 3}
+    volume: 0.562
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: eat4
+    clip: {fileID: 8300000, guid: 4fb3d31bcf48f784d99aa0e8b303c5fc, type: 3}
+    volume: 0.562
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: eat5
+    clip: {fileID: 8300000, guid: fcc1bb173ca6147419935540afdc0f45, type: 3}
+    volume: 0.562
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: eat6
+    clip: {fileID: 8300000, guid: 2f1e20bf222700540b6a942ff61fd49a, type: 3}
+    volume: 0.562
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: eat7
+    clip: {fileID: 8300000, guid: 337154b82423a2544bc8eb3fd5ceb4eb, type: 3}
+    volume: 0.562
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
