@@ -9,8 +9,10 @@ public class UIController : MonoBehaviour
     private Button SFXMuteButton;
     private Button SFXUnmuteButton;
     private Button optionsButton;
+    private Button startButton;
     private Button resumeButton;
     private Button restartButton;
+    private Button quitButton;
     private Label timeLabel;
     private Label miceLabel;
     private Label pauseLabel;
@@ -25,6 +27,8 @@ public class UIController : MonoBehaviour
         optionsButton = root.Q<Button>("options-button");
         resumeButton = root.Q<Button>("resume-button");
         restartButton = root.Q<Button>("restart-button");
+        startButton = root.Q<Button>("start-button");
+        quitButton = root.Q<Button>("quit-button");
         timeLabel = root.Q<Label>("time-label");
         pauseLabel = root.Q<Label>("pause-label");
         miceLabel = root.Q<Label>("mice-label");
@@ -33,8 +37,10 @@ public class UIController : MonoBehaviour
         SFXUnmuteButton.clicked += SFXPressed;
         SFXMuteButton.clicked += SFXPressed;
         optionsButton.clicked += OptionsPressed;
+        startButton.clicked += StartPressed;
         resumeButton.clicked += ResumePressed;
         restartButton.clicked += RestartPressed;
+        quitButton.clicked += QuitPressed;
     }
 
     void SFXPressed()
@@ -52,6 +58,15 @@ public class UIController : MonoBehaviour
         Debug.Log("SFX clicked");
     }
 
+    void StartPressed()
+    {
+        SceneManager.LoadScene("Test Scene");
+    }
+
+    void QuitPressed()
+    {
+        Application.Quit();
+    }
     void OptionsPressed()
     {
         pauseWindow.style.display = DisplayStyle.Flex;
