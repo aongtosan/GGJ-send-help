@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour
 {
@@ -12,12 +13,11 @@ public class UIController : MonoBehaviour
     private Button restartButton;
     private Label timeLabel;
     private Label miceLabel;
-    private Label hpLabel;
     private Label pauseLabel;
     private VisualElement pauseWindow;
     private bool isMuted;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
         SFXMuteButton = root.Q<Button>("sfx-button-mute");
@@ -27,12 +27,14 @@ public class UIController : MonoBehaviour
         restartButton = root.Q<Button>("restart-button");
         timeLabel = root.Q<Label>("time-label");
         pauseLabel = root.Q<Label>("pause-label");
+        miceLabel = root.Q<Label>("mice-label");
         pauseWindow = root.Q<VisualElement>("pause-window");
 
         SFXUnmuteButton.clicked += SFXPressed;
         SFXMuteButton.clicked += SFXPressed;
         optionsButton.clicked += OptionsPressed;
         resumeButton.clicked += ResumePressed;
+        restartButton.clicked += RestartPressed;
     }
 
     void SFXPressed()
@@ -62,16 +64,17 @@ public class UIController : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    void RestartPressed()
+    {
+        SceneManager.LoadScene("Test Scene");
+    }
+
     public void setTime(int time){
         timeLabel.text = formatTime(time);
     }
 
     public void setMice(int mice){
         miceLabel.text = mice.ToString();
-    }
-
-    public void setHP(int hp){
-        hpLabel.text = hp.ToString();
     }
 
     private string formatTime(int time){
@@ -82,12 +85,11 @@ public class UIController : MonoBehaviour
     }
 
     public void gameOver(){
+        pauseWindow.style.display = DisplayStyle.Flex;
         pauseLabel.text = "Game Over!!!";
         pauseLabel.style.color = new StyleColor(Color.red);
         restartButton.style.display = DisplayStyle.Flex;
         resumeButton.style.display = DisplayStyle.None;
-        pauseWindow.style.display = DisplayStyle.Flex;
-        Time.timeScale = 0f;
     }
 
     void Update()

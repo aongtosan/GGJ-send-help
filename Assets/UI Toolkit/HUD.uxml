@@ -1,18 +1,14 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/USS/HUD.uss?fileID=7433441132597879392&amp;guid=2a8608599ed1c214dbdea489009b1fb7&amp;type=3#HUD" />
     <ui:VisualElement class="root-container">
-        <ui:VisualElement name="game-data-container" style="width: 150px; height: 160px; position: absolute; left: 30px; top: 30px; right: 861px; bottom: 281px; background-color: rgba(224, 224, 224, 0.47); padding-top: 0; justify-content: center;">
+        <ui:VisualElement name="game-data-container" style="width: 150px; height: 117px; position: absolute; left: 30px; top: 30px; right: 861px; bottom: 281px; background-color: rgba(224, 224, 224, 0.47); padding-top: 0; justify-content: center;">
             <ui:VisualElement class="game-data-row">
                 <ui:VisualElement class="data-icon" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/icon/clock.png?fileID=2800000&amp;guid=65c93e72da33f9d44b255821be67a136&amp;type=3#clock&apos;);" />
                 <ui:Label text="00:00" display-tooltip-when-elided="true" name="time-label" class="data-label" style="flex-grow: 0;" />
             </ui:VisualElement>
             <ui:VisualElement class="game-data-row">
                 <ui:VisualElement class="data-icon" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/icon/mouse.png?fileID=2800000&amp;guid=b0a613437c953f147b4ab9b0eb077a35&amp;type=3#mouse&apos;);" />
-                <ui:Label text="34" display-tooltip-when-elided="true" name="mice-label" class="data-label" style="flex-grow: 0;" />
-            </ui:VisualElement>
-            <ui:VisualElement class="game-data-row">
-                <ui:VisualElement class="data-icon" style="background-image: url(&apos;project://database/Assets/UI%20Toolkit/icon/heart.png?fileID=2800000&amp;guid=aa814df67a3e0aa4592a640a01d4177f&amp;type=3#heart&apos;);" />
-                <ui:Label text="5" display-tooltip-when-elided="true" name="hp-label" class="data-label" style="flex-grow: 0;" />
+                <ui:Label text="0" display-tooltip-when-elided="true" name="mice-label" class="data-label" style="flex-grow: 0;" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="options-menu-container" style="width: 120px; height: 50px; position: absolute; left: auto; top: 30px; right: 30px; bottom: 0; background-color: rgba(255, 255, 255, 0); flex-direction: row; justify-content: space-around;">
