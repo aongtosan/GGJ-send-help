@@ -63,8 +63,8 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
         if (other.collider.CompareTag("Obstacle")) {
             FindObjectOfType<AudioManager>().Play("Hit");
-            FindObjectOfType<UIController>().gameOver();
-            // SceneManager.LoadScene("Game Over");
+            // FindObjectOfType<UIController>().gameOver();
+            SceneManager.LoadScene("Game Over");
         } else if (other.collider.CompareTag("Food")) {
             Growing();
             Destroy(other.gameObject);

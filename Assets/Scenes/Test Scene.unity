@@ -1054,6 +1054,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUDUIDocument
       objectReference: {fileID: 0}
+    - target: {fileID: 6557115265749894385, guid: bd32d93c1630c3447beccfca9b3b09dc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6557115265749894390, guid: bd32d93c1630c3447beccfca9b3b09dc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6557115265749894391, guid: bd32d93c1630c3447beccfca9b3b09dc, type: 3}
       propertyPath: m_RootOrder
       value: 16
