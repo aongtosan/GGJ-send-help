@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Double Trouble</title>
+    <title>Unity WebGL Player | push-pop</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Double Trouble</div>
+        <div id="unity-build-title">push-pop</div>
       </div>
     </div>
     <script>
@@ -58,12 +58,12 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/DoubleTrouble.loader.js";
       var config = {
-        dataUrl: buildUrl + "/DoubleTrouble.data",
-        frameworkUrl: buildUrl + "/DoubleTrouble.framework.js",
-        codeUrl: buildUrl + "/DoubleTrouble.wasm",
+        dataUrl: buildUrl + "/DoubleTrouble.data.gz",
+        frameworkUrl: buildUrl + "/DoubleTrouble.framework.js.gz",
+        codeUrl: buildUrl + "/DoubleTrouble.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "Double Trouble",
+        productName: "push-pop",
         productVersion: "0.1",
         showBanner: unityShowBanner,
       };
