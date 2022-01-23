@@ -37,7 +37,6 @@ public class UIController : MonoBehaviour
         SFXUnmuteButton.clicked += SFXPressed;
         SFXMuteButton.clicked += SFXPressed;
         optionsButton.clicked += OptionsPressed;
-        startButton.clicked += StartPressed;
         resumeButton.clicked += ResumePressed;
         restartButton.clicked += RestartPressed;
         quitButton.clicked += QuitPressed;
@@ -58,13 +57,9 @@ public class UIController : MonoBehaviour
         Debug.Log("SFX clicked");
     }
 
-    void StartPressed()
-    {
-        SceneManager.LoadScene("Test Scene");
-    }
-
     void QuitPressed()
     {
+        Debug.Log("Quit");
         Application.Quit();
     }
     void OptionsPressed()
@@ -81,6 +76,7 @@ public class UIController : MonoBehaviour
 
     void RestartPressed()
     {
+        Debug.Log("Restart");
         SceneManager.LoadScene("Test Scene");
     }
 
