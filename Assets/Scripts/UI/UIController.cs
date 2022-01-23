@@ -40,19 +40,22 @@ public class UIController : MonoBehaviour
         resumeButton.clicked += ResumePressed;
         restartButton.clicked += RestartPressed;
         quitButton.clicked += QuitPressed;
+
     }
 
     void SFXPressed()
     {
         if(isMuted){
             isMuted = false;
-            SFXUnmuteButton.style.display = DisplayStyle.Flex;
-            SFXMuteButton.style.display = DisplayStyle.None;
+            AudioListener.volume = 1F;
+            SFXUnmuteButton.style.display = DisplayStyle.None;
+            SFXMuteButton.style.display = DisplayStyle.Flex;
         }
         else{
             isMuted = true;
-            SFXUnmuteButton.style.display = DisplayStyle.None;
-            SFXMuteButton.style.display = DisplayStyle.Flex;
+            AudioListener.volume = 0F;
+            SFXUnmuteButton.style.display = DisplayStyle.Flex;
+            SFXMuteButton.style.display = DisplayStyle.None;
         }
         Debug.Log("SFX clicked");
     }
