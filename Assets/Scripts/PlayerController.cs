@@ -39,8 +39,8 @@ public class PlayerController : MonoBehaviour
     {
 
         transform.position += transform.forward * speed * Time.fixedDeltaTime;
-        float turn1Direction = (Input.GetAxis("Player1Horizontal")); 
-        float turn2Direction = (Input.GetAxis("Player2Horizontal")); 
+        float turn1Direction = Mathf.Abs(Input.GetAxis("Player1Horizontal")); 
+        float turn2Direction = -Mathf.Abs(Input.GetAxis("Player2Horizontal")); 
         transform.Rotate(Vector3.up * (turn1Direction + turn2Direction) * 180 * Time.fixedDeltaTime);
         positionPart.Insert(0,transform.position);
         GameObject headR = GameObject.Find("HeadR");
