@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private int StartingLength = 10;
+    private int MouseEatenCount = 0;
 
     [SerializeField]
     private GameObject mousePrefab;
@@ -63,11 +64,15 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
         if (other.collider.CompareTag("Obstacle")) {
             FindObjectOfType<AudioManager>().Play("Hit");
-            // FindObjectOfType<UIController>().gameOver();
+            
             SceneManager.LoadScene("Game Over");
         } else if (other.collider.CompareTag("Food")) {
             Growing();
             Destroy(other.gameObject);
+
+            // count mouse that been eaten 
+            MouseEatenCount += 1;
+            FindObjectOfType<UIController>().setMice(MouseEatenCount);
 
             // sound fx
             int rand = Random.Range(1, 7);
